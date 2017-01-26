@@ -1,8 +1,7 @@
 
-
 // inicio do Work   OK
 
-var work = {      // declarado e impresso: OK
+var work = {
   "jobs": [
     {
       "employer": "Employer job01",
@@ -43,7 +42,7 @@ work.display();   // notação de ponto (.).
 
 // inicio do projects   OK
 
-var projects = {      // declarado e impresso: OK
+var projects = {
   "myProjects": [
     {
       "title": "Secretaria da Fazenda",
@@ -93,7 +92,7 @@ displayProjects();    //notação literal.
 
 // inicio do bio
 
-var bio = {         // declarado e impresso
+var bio = {         // declarado e impresso - Faltando resolver CONTACTS
   "name": "Irving Marcel",
   "role": "Desenvolvedor Web",
   "contacts": {
@@ -170,7 +169,7 @@ var education = {     //falta imprimir
       "onlineCourses": [
         {
           "title": "course01",
-          "school": "course01",     //foi alterado de scool para school
+          "school": "course01",
           "date": "2016",
           "url": "http://courses.com"
         },
@@ -220,18 +219,14 @@ function displayEducation (){
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
     $(".education-entry:last").append(formattedSchoolDegree);
 
+    if(education.schools[school].majors.length > 0){
+      for(major in education.schools[school].majors){
+        var formatedMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+        $(".education-entry:last").append(formatedMajors);
+      }
+    }
+
   }
-              // VERIFICAR O VETOR MAJORS
-
-  // if (education.schools.majors.length > 0){
-  //   $("#education").append(HTMLschoolStart);
-  //
-  //   var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", education.schools.majors[0]);
-  //   $(".education-entry:last").append(formattedSchoolMajors);
-  // }
-
-  var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", education.schools.majors[0]);
-  $(".education-entry:last").append(formattedSchoolMajors);
 
 }
 displayEducation();
