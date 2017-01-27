@@ -49,8 +49,7 @@ var projects = {
       "dates": "2006",
       "description": "Projeto iniciado em 2006 pela Politec com a finalidade de oferecer serviços de apoio ao usuário",
       "images": [
-        "images/197x148.gif",
-        "images/197x148.gif"
+        "images/sefaz.jpg"
       ]
     },
     {
@@ -58,8 +57,7 @@ var projects = {
       "dates": "2010",
       "description": "Projeto iniciado em 2010 pela CPM Braxis com a finalidade de oferecer serviços de Infra-estrutura",
       "images": [
-        "images/197x148.gif",
-        "images/197x148.gif"
+        "images/detran.png"
       ]
     }
   ]
@@ -167,7 +165,6 @@ var education = {
     }
   ]
 }
-
 function displayEducation (){
   for (school in education.schools){
     $("#education").append(HTMLschoolStart);
@@ -201,8 +198,9 @@ function displayEducation (){
         $(".education-entry:last").append(formattedonlineTitle);
         var formattedonlineDate = HTMLonlineDates.replace("%data%", education.schools[school].onlineCourses[course].date);
         $(".education-entry:last").append(formattedonlineDate);
-        var formattedonlineURL = HTMLonlineURL.replace("%data%", education.schools[school].onlineCourses[course].url);
+        var formattedonlineURL = HTMLonlineURL.replace("%var_url%", education.schools[school].onlineCourses[course].url).replace("%data%", education.schools[school].onlineCourses[course].url);
         $(".education-entry:last").append(formattedonlineURL);
+
       }
     }
 

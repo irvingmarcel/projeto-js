@@ -2,6 +2,11 @@
   border: 1px solid red !important;
 }*/
 
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+[class*="brandico-"]:before {
+  font-family: 'brandico', sans-serif;
+}
+
 body,
 div,
 ul,
@@ -30,7 +35,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;         /*alterar pra azul*/
+  color: #0098da;         /*alterar pra azul*/
   line-height: 48px;
   display: inline;
 }
@@ -112,16 +117,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #0098da;  //#f5ae23
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #0098da;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #0098da;
 }
 
 .white-text {
@@ -149,7 +154,11 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center; //space-around
+  padding: 10px;
+}
+
+.flex-box a{
   padding: 10px;
 }
 
