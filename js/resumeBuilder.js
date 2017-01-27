@@ -4,18 +4,18 @@
 var work = {
   "jobs": [
     {
-      "employer": "Employer job01",
-      "title": "Title job01",
-      "location": "Location job01",
-      "datesWorked": "Dates Worked job01",
-      "description": "Description job01"
+      "employer": "Apois à Processamento",
+      "title": "Politec LTDA.",
+      "location": "Maceió-AL",
+      "datesWorked": "2006",
+      "description": "Prestador de serviço à Secretaria de Estado da Fazenda de Alagoas"
     },
     {
-      "employer": "Employer job02",
-      "title": "Title job02",
-      "location": "Location job02",
-      "datesWorked": "Dates Worked job02",
-      "description": "Descripton job02"
+      "employer": "Técnico de Infra-estrutura",
+      "title": "CPM Braxis",
+      "location": "Maceió-AL",
+      "datesWorked": "2010",
+      "description": "Prestador de serviço à Secretaria de Estado da Fazenda de Alagoas"
     }
   ]
 }
@@ -54,9 +54,9 @@ var projects = {
       ]
     },
     {
-      "title": "Detran-al",
+      "title": "Detran-AL",
       "dates": "2010",
-      "description": "Projeto iniciado em 2010 pela CPM Braxis com a finalidade de oferecer serviços de apoio ao usuário",
+      "description": "Projeto iniciado em 2010 pela CPM Braxis com a finalidade de oferecer serviços de Infra-estrutura",
       "images": [
         "images/197x148.gif",
         "images/197x148.gif"
@@ -64,8 +64,7 @@ var projects = {
     }
   ]
 }
-
-function displayProjects () { //poderia ser declarado dessa outra forma: projects.display = function() {}
+projects.display = function() {
   for (project in projects.myProjects) {
     $("#projects").append(HTMLprojectStart);
 
@@ -86,13 +85,13 @@ function displayProjects () { //poderia ser declarado dessa outra forma: project
     }
   }
 }
-displayProjects();    //notação literal.
+projects.display();
 
 // fim do projects
 
-// inicio do bio
+// inicio do bio    OK
 
-var bio = {         // declarado e impresso - Faltando resolver CONTACTS
+var bio = {
   "name": "Irving Marcel",
   "role": "Desenvolvedor Web",
   "contacts": {
@@ -100,21 +99,17 @@ var bio = {         // declarado e impresso - Faltando resolver CONTACTS
     "email": "irvingmarcel@gmail.com",
     "github": "irvingmarcel",
     "twitter": "@irvingmarcel",
-    "location": "Brasil"
+    "location": "Maceió-AL - Brasil"
   },
-  "welcomeMessage": "Sejam bem vindos!",
+  "welcomeMessage": "Bem-vindos ao meu curriculo!",
   "skills": ["Extrovertido", "Determinado", "Comunicativo", "Responsável"],
-  "biopic": "images/fry.jpg"
+  "biopic": "images/fry.jpg"    //Modificar a foto
 }
-
-function displayBio(){
+bio.display = function(){
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   $("#header").prepend(formattedName);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").append(formattedRole);
-
-  // var formattedContacts = HTMLcontactGeneric.replace("%contact%", bio.contacts);
-  // $("#topContacts").append(formattedContacts);
 
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   $("#topContacts").append(formattedMobile);
@@ -127,7 +122,6 @@ function displayBio(){
   var formatterdLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   $("#topContacts").append(formatterdLocation);
 
-
   var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
   $("#header").append(formattedWelcome);
   var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
@@ -138,68 +132,36 @@ function displayBio(){
 
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
     $("#skills").append(formattedSkill);
-
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
     $("#skills").append(formattedSkill);
-
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
     $("#skills").append(formattedSkill);
-
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
     $("#skills").append(formattedSkill);
   }
 
-
 }
-displayBio();
+bio.display();
 
 // fim da bio
 
-// inicio do education
+// inicio do education OK
 
-var education = {     //falta imprimir
+var education = {
   "schools": [
     {
-      "name": "Name school01",
-      "location": "Location school01",
-      "degree": "Degree school01",
-      "majors": ["majors0101", "majors0102", "majors0103"],
-      "dates": "2016",
-      "url": "http://exempleScool01.com",
+      "name": "Conhecimento Digital",
+      "location": "Maceió-AL",
+      "degree": "Intermediário",
+      "majors": ["Java", "Orientação à Objeto"],
+      "dates": "2007",
+      "url": "http://www.conhecimentodigital.com.br",
       "onlineCourses": [
         {
-          "title": "course01",
-          "school": "course01",
-          "date": "2016",
-          "url": "http://courses.com"
-        },
-        {
-          "title": "course02",
-          "scool": "course02",
-          "date": 2016,
-          "url": "http://courses.com"
-        }
-      ]
-    },
-    {
-    "name": "Name school02",
-    "location": "Location school02",
-    "degree": "Degree school02",
-    "majors": ["majors0201", "majors0202", "majors0203"],
-    "dates": "2016",
-    "url": "http://exempleScool02.com",
-    "onlineCourses": [
-        {
-          "title": "course01",
-          "school": "course01",
-          "date": "2016",
-          "url": "http://courses.com"
-        },
-        {
-          "title": "course02",
-          "school": "course02",
-          "date": "2016",
-          "url": "http://courses.com"
+          "title": "Introdução à Informática",
+          "school": "Sebrae Cursos",
+          "date": "2004",
+          "url": "http://www.sebrae.com.br"
         }
       ]
     }
@@ -226,10 +188,30 @@ function displayEducation (){
       }
     }
 
+    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+    $(".education-entry:last").append(formattedSchoolDates);
+    var formattedSchoolsURL = HTMLschoolsURL.replace("%data%", education.schools[school].url);
+    $(".education-entry:last").append(formattedSchoolsURL);
+
+    if(education.schools[school].onlineCourses.length > 0){
+      for(course in education.schools[school].onlineCourses){
+        var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.schools[school].onlineCourses[course].school);
+        $(".education-entry:last").append(formattedonlineSchool);
+        var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.schools[school].onlineCourses[course].title);
+        $(".education-entry:last").append(formattedonlineTitle);
+        var formattedonlineDate = HTMLonlineDates.replace("%data%", education.schools[school].onlineCourses[course].date);
+        $(".education-entry:last").append(formattedonlineDate);
+        var formattedonlineURL = HTMLonlineURL.replace("%data%", education.schools[school].onlineCourses[course].url);
+        $(".education-entry:last").append(formattedonlineURL);
+      }
+    }
+
   }
 
 }
 displayEducation();
+
+//fim do Education
 
 
 //contador de clicks
