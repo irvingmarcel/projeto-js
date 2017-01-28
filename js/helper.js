@@ -37,24 +37,24 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectTitle = '<a href="%url%">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolName = '<a href="%url%">%data%';
 var HTMLschoolDegree = ' - %data%</a>';
 var HTMLschoolDates = '<div class="date-text-school">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-var HTMLschoolsURL = '<a href="#">%data%</a>';    //adicionado por mim. Funcionando OK :)
+var HTMLschoolsURL = '<a href="%url%">%data%</a>';    //adicionado por mim. Funcionando OK :)
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<p> - %data%</p>';
-var HTMLonlineSchool = '<a href="#">%data%</a>';
+var HTMLonlineSchool = '<a href="%url%">%data%</a>';
 var HTMLonlineDates = '<div class="date-text-school">%data%</div>';
-var HTMLonlineURL = '<a href="%var_url%">%data%</a><br>';
+var HTMLonlineURL = '<a href="%url%">%data%</a><br>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
